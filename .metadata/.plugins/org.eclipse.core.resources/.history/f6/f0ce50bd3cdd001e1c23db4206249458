@@ -1,0 +1,12 @@
+package com.genesis.model;
+
+import org.springframework.stereotype.Component;
+
+@Component
+@Setter
+@Getter
+public class WebPageModel {
+
+    @JsonProperty("provider_code")
+    private String providerCode;
+}

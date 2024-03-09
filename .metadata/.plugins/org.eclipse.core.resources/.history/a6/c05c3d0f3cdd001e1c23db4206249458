@@ -1,0 +1,18 @@
+package com.genesis.model;
+
+import org.springframework.stereotype.Component;
+
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Component
+@Setter
+@Getter
+@JsonPropertyOrder({"specialityCode", "specialityDescription", "providerList", "status"})
+public class HipoLabApiResponse {
+
+    @JsonProperty("speciality_code")
+    private String specialityCode;
+}

@@ -1,0 +1,12 @@
+package com.genesis.repositories;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.genesis.model.ClientEntity;
+
+@Repository
+public interface ClientDao extends CrudRepository<ClientEntity,String> {
+
+	ClientEntity findByClientCode(String client_code);
+}

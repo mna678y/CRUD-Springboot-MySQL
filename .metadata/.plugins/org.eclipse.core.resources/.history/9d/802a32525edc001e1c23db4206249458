@@ -1,0 +1,21 @@
+package com.genesis.util;
+
+public enum BankNames {
+
+	BANK_ALFALAH("BANK_ALFALAH"),
+	BANK_HBL("BANK_HBL");
+	
+	private String bankName;
+
+	
+	private BankNames(String bankName) {
+		this.bankName = bankName;
+	}
+
+
+	public String getBankName() {
+		return bankName;
+	}
+	
+	
+}

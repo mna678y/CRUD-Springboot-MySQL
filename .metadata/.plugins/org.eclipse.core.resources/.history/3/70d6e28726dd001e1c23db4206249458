@@ -1,0 +1,30 @@
+package com.genesis.entities;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import lombok.Getter;
+import lombok.Setter;
+
+
+@Entity
+@Table(name = "DOMAIN")
+@Getter @Setter
+public class Domain implements Serializable {
+	
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long domainId;
+
+    private String domainName;
+
+    @ManyToOne
+    private University university;
+
+}

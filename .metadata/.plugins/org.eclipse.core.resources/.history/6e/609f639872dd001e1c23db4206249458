@@ -1,0 +1,5 @@
+package com.genesis.model;
+
+public class UniversityDataResponse {
+
+}

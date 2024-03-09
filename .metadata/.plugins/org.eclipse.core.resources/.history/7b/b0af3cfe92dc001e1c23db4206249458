@@ -1,0 +1,11 @@
+package com.genesis.model;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter @Setter
+public class UniversityDataRequest {
+	private String cnic;
+	
+ 
+}

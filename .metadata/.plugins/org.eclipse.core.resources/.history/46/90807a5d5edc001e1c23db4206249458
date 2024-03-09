@@ -1,0 +1,23 @@
+package com.softech.util;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Utilities {
+
+	public String extractIPAddress(HttpServletRequest request) {
+		// Get the IP address of the client making the request
+		String ipAddress = request.getRemoteAddr();
+
+		// If the client is behind a proxy, get the IP address from the X-Forwarded-For
+		// header
+		String forwardedFor = request.getHeader("X-Forwarded-For");
+		if (forwardedFor != null && !forwardedFor.isEmpty()) {
+			ipAddress = forwardedFor.split(",")[0].trim();
+		}
+
+		return ipAddress;
+	}
+}

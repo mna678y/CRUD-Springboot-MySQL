@@ -1,0 +1,116 @@
+package com.genesis.model;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import java.util.Date;
+import java.util.List;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "hbl_cla_api_user")
+@SequenceGenerator(name= "NAME_SEQUENCE", sequenceName = "ALFA_CLA_USER_SEQ", initialValue=1, allocationSize = 1)
+
+public class ApiUser {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="NAME_SEQUENCE")
+	private Long id;
+	
+	@Column(name = "cnic")
+	private String cnic;
+
+	@Column(name = "password")
+	@JsonIgnore
+	private String password;
+	
+	@Column(name = "login_token")
+	private String loginToken;
+
+	@Column(name = "token_expiry")
+	private Date tokenExpiry;
+
+	@Column (name = "demo_user")
+	private boolean demoUser;
+	
+	@Column(name = "client_code")
+	private String clientCode;
+	
+	@ElementCollection
+	@CollectionTable(name = "hbl_cla_bank_account", joinColumns = @JoinColumn(name = "id"))
+	@Column(name = "accounts")
+	private List<String> accounts;
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getCnic() {
+		return cnic;
+	}
+
+	public void setCnic(String cnic) {
+		this.cnic = cnic;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getLoginToken() {
+		return loginToken;
+	}
+
+	public void setLoginToken(String loginToken) {
+		this.loginToken = loginToken;
+	}
+
+	public Date getTokenExpiry() {
+		return tokenExpiry;
+	}
+
+	public void setTokenExpiry(Date tokenExpiry) {
+		this.tokenExpiry = tokenExpiry;
+	}
+
+	public boolean isDemoUser() {
+		return demoUser;
+	}
+
+	public void setDemoUser(boolean demoUser) {
+		this.demoUser = demoUser;
+	}
+	
+
+	public List<String> getAccounts() {
+		return accounts;
+	}
+
+	public void setAccounts(List<String> accounts) {
+		this.accounts = accounts;
+	}
+
+	public String getClientCode() {
+		return clientCode;
+	}
+
+	public void setClientCode(String clientCode) {
+		this.clientCode = clientCode;
+	}
+
+	@Override
+	public String toString() {
+		return "ApiUser [id=" + id + ", cnic=" + cnic + ", password=" + password + ", loginToken=" + loginToken
+				+ ", tokenExpiry=" + tokenExpiry + ", demoUser=" + demoUser + ", accounts=" + accounts + "]";
+	}
+
+
+}

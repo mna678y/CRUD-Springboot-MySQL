@@ -1,0 +1,22 @@
+package com.genesis.service;
+
+
+import com.genesis.model.CashDepositRequest;
+import com.genesis.model.ProcessResponse;
+
+public interface ClaBankService {
+
+	ProcessResponse checkOrCreate(String cnic, String bankAcct, String name);
+
+	ProcessResponse findBankAcctByCnic(String cnic);
+
+	ProcessResponse findUserIdByBank(String bankAcct);
+
+	ProcessResponse findClientCodeByBank(String bankAcct);
+	
+	ProcessResponse processCashDeposit(CashDepositRequest cashDepositRequest);
+	
+	ProcessResponse processCashTransfer(CashDepositRequest cashDepositRequest);
+	
+
+}

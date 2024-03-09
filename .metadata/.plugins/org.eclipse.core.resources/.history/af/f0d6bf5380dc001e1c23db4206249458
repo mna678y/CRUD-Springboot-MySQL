@@ -1,0 +1,10 @@
+package com.genesis.entities;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "COUNTRIES")
+public class University {
+
+}

@@ -1,0 +1,42 @@
+package com.genesis.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "client")
+public class ClientEntity {
+
+	@Id
+	@Column(name="client_code")
+	private String clientCode;
+	@Column(name="client_name")
+	private String clientName;
+	@Column(name="comp_id_card_number")
+	private String idCardNumber;
+	
+	
+	public String getClientCode() {
+		return clientCode;
+	}
+	public void setClientCode(String clientCode) {
+		this.clientCode = clientCode;
+	}
+	public String getClientName() {
+		return clientName;
+	}
+	public void setClientName(String clientName) {
+		this.clientName = clientName;
+	}
+	public String getIdCardNumber() {
+		return idCardNumber;
+	}
+	public void setIdCardNumber(String idCardNumber) {
+		this.idCardNumber = idCardNumber;
+	}
+	
+	
+	
+}

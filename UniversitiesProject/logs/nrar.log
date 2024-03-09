@@ -1,0 +1,746 @@
+2024-03-08 12:46:11.287 [INFO] [main] [com.genesis.UniversitiesApplication:55] Starting UniversitiesApplication using Java 1.8.0_311 on MNA with PID 17544 (E:\eclipse-workspace\genesis\UniversitiesProject\target\classes started by 92306 in E:\eclipse-workspace\genesis\UniversitiesProject)
+2024-03-08 12:46:11.293 [INFO] [main] [com.genesis.UniversitiesApplication:663] The following profiles are active: dev
+2024-03-08 12:46:13.751 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08 12:46:13.950 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 175 ms. Found 3 JPA repository interfaces.
+2024-03-08 12:46:14.892 [INFO] [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@78c1a023' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-03-08 12:46:14.904 [INFO] [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-03-08 12:46:15.858 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 9001 (http)
+2024-03-08 12:46:15.902 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9001"]
+2024-03-08 12:46:15.904 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2024-03-08 12:46:15.907 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-08 12:46:16.103 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+2024-03-08 12:46:16.104 [INFO] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 4660 ms
+2024-03-08 12:46:16.763 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2024-03-08 12:46:17.412 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2024-03-08 12:46:17.657 [INFO] [main] [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08 12:46:17.861 [INFO] [main] [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-08 12:46:18.361 [INFO] [main] [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-08 12:46:18.695 [INFO] [main] [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2024-03-08 12:46:20.220 [INFO] [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08 12:46:20.261 [INFO] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 12:46:20.395 [WARN] [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08 12:46:20.435 [WARN] [main] [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:591] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webSecurityConfig': Unsatisfied dependency expressed through field 'jwtUserDetailsService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.core.userdetails.UserDetailsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-03-08 12:46:20.436 [INFO] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 12:46:20.442 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+2024-03-08 12:46:20.470 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+2024-03-08 12:46:20.486 [INFO] [main] [org.apache.catalina.core.StandardService:173] Stopping service [Tomcat]
+2024-03-08 12:46:20.530 [INFO] [main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-03-08 12:46:20.614 [ERROR] [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter:40] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field jwtUserDetailsService in com.genesis.config.WebSecurityConfig required a bean of type 'org.springframework.security.core.userdetails.UserDetailsService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.core.userdetails.UserDetailsService' in your configuration.
+
+2024-03-08 12:48:00.126 [INFO] [main] [com.genesis.UniversitiesApplication:55] Starting UniversitiesApplication using Java 1.8.0_311 on MNA with PID 2000 (E:\eclipse-workspace\genesis\UniversitiesProject\target\classes started by 92306 in E:\eclipse-workspace\genesis\UniversitiesProject)
+2024-03-08 12:48:00.131 [INFO] [main] [com.genesis.UniversitiesApplication:663] The following profiles are active: dev
+2024-03-08 12:48:01.473 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08 12:48:01.574 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 82 ms. Found 3 JPA repository interfaces.
+2024-03-08 12:48:02.352 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 9001 (http)
+2024-03-08 12:48:02.371 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9001"]
+2024-03-08 12:48:02.372 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2024-03-08 12:48:02.373 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-08 12:48:02.510 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+2024-03-08 12:48:02.510 [INFO] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 2282 ms
+2024-03-08 12:48:02.755 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2024-03-08 12:48:03.092 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2024-03-08 12:48:03.175 [INFO] [main] [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08 12:48:03.301 [INFO] [main] [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-08 12:48:03.522 [INFO] [main] [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-08 12:48:03.734 [INFO] [main] [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2024-03-08 12:48:04.737 [INFO] [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08 12:48:04.756 [INFO] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 12:48:06.877 [WARN] [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08 12:48:07.953 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9001"]
+2024-03-08 12:48:08.093 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 9001 (http) with context path ''
+2024-03-08 12:48:08.132 [INFO] [main] [com.genesis.UniversitiesApplication:61] Started UniversitiesApplication in 8.818 seconds (JVM running for 10.888)
+2024-03-08 12:48:33.748 [INFO] [RMI TCP Connection(3)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 12:48:33.748 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 12:48:34.232 [INFO] [RMI TCP Connection(3)-127.0.0.1] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 12:48:34.238 [INFO] [RMI TCP Connection(3)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+2024-03-08 12:48:34.268 [INFO] [RMI TCP Connection(3)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+2024-03-08 16:17:45.481 [INFO] [main] [com.genesis.UniversitiesApplication:55] Starting UniversitiesApplication using Java 1.8.0_311 on MNA with PID 17624 (E:\eclipse-workspace\genesis\UniversitiesProject\target\classes started by 92306 in E:\eclipse-workspace\genesis\UniversitiesProject)
+2024-03-08 16:17:45.486 [INFO] [main] [com.genesis.UniversitiesApplication:663] The following profiles are active: dev
+2024-03-08 16:17:46.586 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08 16:17:46.734 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 126 ms. Found 4 JPA repository interfaces.
+2024-03-08 16:17:47.508 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 9001 (http)
+2024-03-08 16:17:47.524 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9001"]
+2024-03-08 16:17:47.527 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2024-03-08 16:17:47.527 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-08 16:17:47.680 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+2024-03-08 16:17:47.680 [INFO] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 2074 ms
+2024-03-08 16:17:47.992 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2024-03-08 16:17:48.306 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2024-03-08 16:17:48.397 [INFO] [main] [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08 16:17:48.537 [INFO] [main] [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-08 16:17:48.844 [INFO] [main] [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-08 16:17:49.120 [INFO] [main] [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2024-03-08 16:17:49.471 [ERROR] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:426] Failed to initialize JPA EntityManagerFactory: @Column(s) not allowed on a @ManyToOne property: com.genesis.entities.Domain.university
+2024-03-08 16:17:49.474 [WARN] [main] [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext:591] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: com.genesis.entities.Domain.university
+2024-03-08 16:17:49.475 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+2024-03-08 16:17:49.494 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+2024-03-08 16:17:49.502 [INFO] [main] [org.apache.catalina.core.StandardService:173] Stopping service [Tomcat]
+2024-03-08 16:17:49.520 [INFO] [main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-03-08 16:17:49.551 [ERROR] [main] [org.springframework.boot.SpringApplication:843] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: com.genesis.entities.Domain.university
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.genesis.UniversitiesApplication.main(UniversitiesApplication.java:17)
+Caused by: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: com.genesis.entities.Domain.university
+	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:1778)
+	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:979)
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:806)
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:248)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:239)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:282)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 16 common frames omitted
+2024-03-08 16:19:17.851 [INFO] [main] [com.genesis.UniversitiesApplication:55] Starting UniversitiesApplication using Java 1.8.0_311 on MNA with PID 12712 (E:\eclipse-workspace\genesis\UniversitiesProject\target\classes started by 92306 in E:\eclipse-workspace\genesis\UniversitiesProject)
+2024-03-08 16:19:17.857 [INFO] [main] [com.genesis.UniversitiesApplication:663] The following profiles are active: dev
+2024-03-08 16:19:18.838 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08 16:19:18.956 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 101 ms. Found 4 JPA repository interfaces.
+2024-03-08 16:19:19.696 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 9001 (http)
+2024-03-08 16:19:19.711 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9001"]
+2024-03-08 16:19:19.713 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2024-03-08 16:19:19.713 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-08 16:19:19.849 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+2024-03-08 16:19:19.850 [INFO] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 1878 ms
+2024-03-08 16:19:20.141 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2024-03-08 16:19:20.380 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2024-03-08 16:19:20.454 [INFO] [main] [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08 16:19:20.571 [INFO] [main] [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-08 16:19:20.829 [INFO] [main] [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-08 16:19:21.073 [INFO] [main] [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2024-03-08 16:19:22.212 [INFO] [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08 16:19:22.231 [INFO] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 16:19:23.621 [WARN] [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08 16:19:24.356 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9001"]
+2024-03-08 16:19:24.381 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 9001 (http) with context path ''
+2024-03-08 16:19:24.396 [INFO] [main] [com.genesis.UniversitiesApplication:61] Started UniversitiesApplication in 7.224 seconds (JVM running for 9.06)
+2024-03-08 16:20:36.072 [INFO] [http-nio-9001-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08 16:20:36.073 [INFO] [http-nio-9001-exec-1] [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2024-03-08 16:20:36.074 [INFO] [http-nio-9001-exec-1] [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 1 ms
+2024-03-08 16:32:34.428 [INFO] [main] [com.genesis.UniversitiesApplication:55] Starting UniversitiesApplication using Java 1.8.0_311 on MNA with PID 4372 (E:\eclipse-workspace\genesis\UniversitiesProject\target\classes started by 92306 in E:\eclipse-workspace\genesis\UniversitiesProject)
+2024-03-08 16:32:34.433 [INFO] [main] [com.genesis.UniversitiesApplication:663] The following profiles are active: dev
+2024-03-08 16:32:35.531 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08 16:32:35.633 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 85 ms. Found 4 JPA repository interfaces.
+2024-03-08 16:32:36.520 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 9001 (http)
+2024-03-08 16:32:36.542 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9001"]
+2024-03-08 16:32:36.544 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2024-03-08 16:32:36.544 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-08 16:32:36.722 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+2024-03-08 16:32:36.723 [INFO] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 2200 ms
+2024-03-08 16:32:37.014 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2024-03-08 16:32:37.334 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2024-03-08 16:32:37.406 [INFO] [main] [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08 16:32:37.510 [INFO] [main] [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-08 16:32:37.728 [INFO] [main] [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-08 16:32:37.932 [INFO] [main] [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2024-03-08 16:32:38.949 [INFO] [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08 16:32:38.968 [INFO] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 16:32:40.396 [WARN] [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08 16:32:41.111 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9001"]
+2024-03-08 16:32:41.136 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 9001 (http) with context path ''
+2024-03-08 16:32:41.151 [INFO] [main] [com.genesis.UniversitiesApplication:61] Started UniversitiesApplication in 7.455 seconds (JVM running for 9.318)
+2024-03-08 16:32:47.513 [INFO] [http-nio-9001-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08 16:32:47.514 [INFO] [http-nio-9001-exec-2] [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2024-03-08 16:32:47.516 [INFO] [http-nio-9001-exec-2] [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 2 ms
+2024-03-08 16:32:49.519 [INFO] [http-nio-9001-exec-2] [com.genesis.util.Utilities:37] Cannot deserialize value of type `com.genesis.model.HipoLabApiResponse` from Array value (token `JsonToken.START_ARRAY`)
+ at [Source: UNKNOWN; line: -1, column: -1]
+2024-03-08 16:38:43.422 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 16:38:43.531 [INFO] [RMI TCP Connection(3)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 16:38:43.881 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 16:38:43.887 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+2024-03-08 16:38:43.913 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+2024-03-08 16:38:48.839 [INFO] [main] [com.genesis.UniversitiesApplication:55] Starting UniversitiesApplication using Java 1.8.0_311 on MNA with PID 19000 (E:\eclipse-workspace\genesis\UniversitiesProject\target\classes started by 92306 in E:\eclipse-workspace\genesis\UniversitiesProject)
+2024-03-08 16:38:48.843 [INFO] [main] [com.genesis.UniversitiesApplication:663] The following profiles are active: dev
+2024-03-08 16:38:49.866 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08 16:38:49.964 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 82 ms. Found 4 JPA repository interfaces.
+2024-03-08 16:38:50.666 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 9001 (http)
+2024-03-08 16:38:50.685 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9001"]
+2024-03-08 16:38:50.685 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2024-03-08 16:38:50.686 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-08 16:38:50.848 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+2024-03-08 16:38:50.849 [INFO] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 1931 ms
+2024-03-08 16:38:51.069 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2024-03-08 16:38:51.373 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2024-03-08 16:38:51.446 [INFO] [main] [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08 16:38:51.539 [INFO] [main] [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-08 16:38:51.763 [INFO] [main] [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-08 16:38:51.967 [INFO] [main] [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2024-03-08 16:38:52.952 [INFO] [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08 16:38:52.972 [INFO] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 16:38:54.593 [WARN] [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08 16:38:55.332 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9001"]
+2024-03-08 16:38:55.359 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 9001 (http) with context path ''
+2024-03-08 16:38:55.372 [INFO] [main] [com.genesis.UniversitiesApplication:61] Started UniversitiesApplication in 7.18 seconds (JVM running for 8.847)
+2024-03-08 16:39:22.903 [INFO] [http-nio-9001-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08 16:39:22.904 [INFO] [http-nio-9001-exec-2] [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2024-03-08 16:39:22.909 [INFO] [http-nio-9001-exec-2] [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 4 ms
+2024-03-08 16:41:59.507 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 16:41:59.627 [INFO] [RMI TCP Connection(3)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 16:41:59.991 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 16:41:59.996 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+2024-03-08 16:42:00.010 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+2024-03-08 16:42:05.670 [INFO] [main] [com.genesis.UniversitiesApplication:55] Starting UniversitiesApplication using Java 1.8.0_311 on MNA with PID 17488 (E:\eclipse-workspace\genesis\UniversitiesProject\target\classes started by 92306 in E:\eclipse-workspace\genesis\UniversitiesProject)
+2024-03-08 16:42:05.677 [INFO] [main] [com.genesis.UniversitiesApplication:663] The following profiles are active: dev
+2024-03-08 16:42:06.916 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08 16:42:07.049 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 113 ms. Found 4 JPA repository interfaces.
+2024-03-08 16:42:07.936 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 9001 (http)
+2024-03-08 16:42:07.954 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9001"]
+2024-03-08 16:42:07.956 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2024-03-08 16:42:07.957 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-08 16:42:08.124 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+2024-03-08 16:42:08.125 [INFO] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 2293 ms
+2024-03-08 16:42:08.485 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2024-03-08 16:42:08.766 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2024-03-08 16:42:08.857 [INFO] [main] [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08 16:42:08.987 [INFO] [main] [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-08 16:42:09.274 [INFO] [main] [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-08 16:42:09.557 [INFO] [main] [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2024-03-08 16:42:10.902 [INFO] [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08 16:42:10.930 [INFO] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 16:42:12.809 [WARN] [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08 16:42:13.681 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9001"]
+2024-03-08 16:42:13.722 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 9001 (http) with context path ''
+2024-03-08 16:42:13.742 [INFO] [main] [com.genesis.UniversitiesApplication:61] Started UniversitiesApplication in 8.913 seconds (JVM running for 11.194)
+2024-03-08 16:42:26.813 [INFO] [http-nio-9001-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08 16:42:26.814 [INFO] [http-nio-9001-exec-1] [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2024-03-08 16:42:26.818 [INFO] [http-nio-9001-exec-1] [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 3 ms
+2024-03-08 16:50:15.207 [INFO] [main] [com.genesis.UniversitiesApplication:55] Starting UniversitiesApplication using Java 1.8.0_311 on MNA with PID 10572 (E:\eclipse-workspace\genesis\UniversitiesProject\target\classes started by 92306 in E:\eclipse-workspace\genesis\UniversitiesProject)
+2024-03-08 16:50:15.210 [INFO] [main] [com.genesis.UniversitiesApplication:663] The following profiles are active: dev
+2024-03-08 16:50:16.195 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08 16:50:16.311 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 99 ms. Found 4 JPA repository interfaces.
+2024-03-08 16:50:17.061 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 9001 (http)
+2024-03-08 16:50:17.077 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9001"]
+2024-03-08 16:50:17.078 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2024-03-08 16:50:17.079 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-08 16:50:17.213 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+2024-03-08 16:50:17.213 [INFO] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 1926 ms
+2024-03-08 16:50:17.437 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2024-03-08 16:50:17.760 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2024-03-08 16:50:17.836 [INFO] [main] [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08 16:50:17.929 [INFO] [main] [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-08 16:50:18.142 [INFO] [main] [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-08 16:50:18.345 [INFO] [main] [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2024-03-08 16:50:19.329 [INFO] [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08 16:50:19.346 [INFO] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 16:50:20.780 [WARN] [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08 16:50:21.569 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9001"]
+2024-03-08 16:50:21.592 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 9001 (http) with context path ''
+2024-03-08 16:50:21.606 [INFO] [main] [com.genesis.UniversitiesApplication:61] Started UniversitiesApplication in 7.063 seconds (JVM running for 8.699)
+2024-03-08 16:50:28.768 [INFO] [http-nio-9001-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08 16:50:28.768 [INFO] [http-nio-9001-exec-1] [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2024-03-08 16:50:28.772 [INFO] [http-nio-9001-exec-1] [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 3 ms
+2024-03-08 16:54:04.421 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 16:54:04.556 [INFO] [RMI TCP Connection(3)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 16:54:04.952 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 16:54:04.959 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+2024-03-08 16:54:04.975 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+2024-03-08 17:12:07.080 [INFO] [main] [com.genesis.UniversitiesApplication:55] Starting UniversitiesApplication using Java 1.8.0_311 on MNA with PID 12844 (E:\eclipse-workspace\genesis\UniversitiesProject\target\classes started by 92306 in E:\eclipse-workspace\genesis\UniversitiesProject)
+2024-03-08 17:12:07.084 [INFO] [main] [com.genesis.UniversitiesApplication:663] The following profiles are active: dev
+2024-03-08 17:12:08.064 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08 17:12:08.201 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 119 ms. Found 4 JPA repository interfaces.
+2024-03-08 17:12:08.919 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 9001 (http)
+2024-03-08 17:12:08.939 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9001"]
+2024-03-08 17:12:08.941 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2024-03-08 17:12:08.941 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-08 17:12:09.074 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+2024-03-08 17:12:09.074 [INFO] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 1908 ms
+2024-03-08 17:12:09.306 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2024-03-08 17:12:09.618 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2024-03-08 17:12:09.693 [INFO] [main] [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08 17:12:09.788 [INFO] [main] [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-08 17:12:09.997 [INFO] [main] [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-08 17:12:10.193 [INFO] [main] [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2024-03-08 17:12:11.350 [INFO] [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08 17:12:11.377 [INFO] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 17:12:12.926 [WARN] [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08 17:12:13.631 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9001"]
+2024-03-08 17:12:13.654 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 9001 (http) with context path ''
+2024-03-08 17:12:13.671 [INFO] [main] [com.genesis.UniversitiesApplication:61] Started UniversitiesApplication in 7.367 seconds (JVM running for 9.092)
+2024-03-08 17:12:20.949 [INFO] [http-nio-9001-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08 17:12:20.950 [INFO] [http-nio-9001-exec-1] [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2024-03-08 17:12:20.956 [INFO] [http-nio-9001-exec-1] [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 4 ms
+2024-03-08 17:12:24.769 [ERROR] [http-nio-9001-exec-1] [com.genesis.service.serviceImpl.UniversityDataServiceImpl:73] No EntityManager with actual transaction available for current thread - cannot reliably process 'persist' call
+2024-03-08 17:12:47.697 [ERROR] [http-nio-9001-exec-3] [com.genesis.service.serviceImpl.UniversityDataServiceImpl:73] No EntityManager with actual transaction available for current thread - cannot reliably process 'persist' call
+2024-03-08 17:15:24.687 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 17:15:24.819 [INFO] [RMI TCP Connection(3)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 17:15:25.161 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 17:15:25.166 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+2024-03-08 17:15:25.183 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+2024-03-08 17:15:53.435 [INFO] [main] [com.genesis.UniversitiesApplication:55] Starting UniversitiesApplication using Java 1.8.0_311 on MNA with PID 13056 (E:\eclipse-workspace\genesis\UniversitiesProject\target\classes started by 92306 in E:\eclipse-workspace\genesis\UniversitiesProject)
+2024-03-08 17:15:53.439 [INFO] [main] [com.genesis.UniversitiesApplication:663] The following profiles are active: dev
+2024-03-08 17:15:54.444 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08 17:15:54.545 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 84 ms. Found 4 JPA repository interfaces.
+2024-03-08 17:15:55.263 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 9001 (http)
+2024-03-08 17:15:55.280 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9001"]
+2024-03-08 17:15:55.281 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2024-03-08 17:15:55.282 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-08 17:15:55.412 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+2024-03-08 17:15:55.412 [INFO] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 1893 ms
+2024-03-08 17:15:55.643 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2024-03-08 17:15:55.960 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2024-03-08 17:15:56.041 [INFO] [main] [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08 17:15:56.140 [INFO] [main] [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-08 17:15:56.360 [INFO] [main] [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-08 17:15:56.567 [INFO] [main] [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2024-03-08 17:15:57.563 [INFO] [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08 17:15:57.578 [INFO] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 17:15:59.029 [WARN] [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08 17:15:59.741 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9001"]
+2024-03-08 17:15:59.764 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 9001 (http) with context path ''
+2024-03-08 17:15:59.779 [INFO] [main] [com.genesis.UniversitiesApplication:61] Started UniversitiesApplication in 6.98 seconds (JVM running for 8.583)
+2024-03-08 17:16:07.331 [INFO] [http-nio-9001-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08 17:16:07.334 [INFO] [http-nio-9001-exec-1] [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2024-03-08 17:16:07.337 [INFO] [http-nio-9001-exec-1] [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 3 ms
+2024-03-08 17:16:08.769 [ERROR] [http-nio-9001-exec-1] [com.genesis.service.serviceImpl.UniversityDataServiceImpl:74] No EntityManager with actual transaction available for current thread - cannot reliably process 'persist' call
+2024-03-08 17:17:57.891 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 17:17:58.052 [INFO] [RMI TCP Connection(3)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 17:17:58.204 [INFO] [RMI TCP Connection(4)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 17:17:58.359 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 17:17:58.364 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+2024-03-08 17:17:58.378 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+2024-03-08 17:18:04.572 [INFO] [main] [com.genesis.UniversitiesApplication:55] Starting UniversitiesApplication using Java 1.8.0_311 on MNA with PID 9608 (E:\eclipse-workspace\genesis\UniversitiesProject\target\classes started by 92306 in E:\eclipse-workspace\genesis\UniversitiesProject)
+2024-03-08 17:18:04.576 [INFO] [main] [com.genesis.UniversitiesApplication:663] The following profiles are active: dev
+2024-03-08 17:18:06.194 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08 17:18:06.306 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 95 ms. Found 4 JPA repository interfaces.
+2024-03-08 17:18:07.247 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 9001 (http)
+2024-03-08 17:18:07.269 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9001"]
+2024-03-08 17:18:07.270 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2024-03-08 17:18:07.271 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-08 17:18:07.421 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+2024-03-08 17:18:07.421 [INFO] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 2755 ms
+2024-03-08 17:18:07.678 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2024-03-08 17:18:08.040 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2024-03-08 17:18:08.115 [INFO] [main] [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08 17:18:08.230 [INFO] [main] [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-08 17:18:08.556 [INFO] [main] [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-08 17:18:08.884 [INFO] [main] [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2024-03-08 17:18:09.961 [INFO] [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08 17:18:09.977 [INFO] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 17:18:11.427 [WARN] [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08 17:18:12.134 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9001"]
+2024-03-08 17:18:12.161 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 9001 (http) with context path ''
+2024-03-08 17:18:12.177 [INFO] [main] [com.genesis.UniversitiesApplication:61] Started UniversitiesApplication in 8.866 seconds (JVM running for 11.921)
+2024-03-08 17:18:15.547 [INFO] [http-nio-9001-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08 17:18:15.548 [INFO] [http-nio-9001-exec-2] [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2024-03-08 17:18:15.550 [INFO] [http-nio-9001-exec-2] [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 2 ms
+2024-03-08 17:18:17.094 [ERROR] [http-nio-9001-exec-2] [com.genesis.service.serviceImpl.UniversityDataServiceImpl:72] No EntityManager with actual transaction available for current thread - cannot reliably process 'persist' call
+2024-03-08 17:19:06.585 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 17:19:06.682 [INFO] [RMI TCP Connection(3)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 17:19:07.090 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 17:19:07.096 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+2024-03-08 17:19:07.118 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+2024-03-08 17:20:02.788 [INFO] [main] [com.genesis.UniversitiesApplication:55] Starting UniversitiesApplication using Java 1.8.0_311 on MNA with PID 19076 (E:\eclipse-workspace\genesis\UniversitiesProject\target\classes started by 92306 in E:\eclipse-workspace\genesis\UniversitiesProject)
+2024-03-08 17:20:02.793 [INFO] [main] [com.genesis.UniversitiesApplication:663] The following profiles are active: dev
+2024-03-08 17:20:03.797 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08 17:20:03.908 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 90 ms. Found 4 JPA repository interfaces.
+2024-03-08 17:20:04.640 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 9001 (http)
+2024-03-08 17:20:04.657 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9001"]
+2024-03-08 17:20:04.657 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2024-03-08 17:20:04.658 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-08 17:20:04.801 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+2024-03-08 17:20:04.802 [INFO] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 1932 ms
+2024-03-08 17:20:05.037 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2024-03-08 17:20:05.361 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2024-03-08 17:20:05.440 [INFO] [main] [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08 17:20:05.534 [INFO] [main] [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-08 17:20:05.811 [INFO] [main] [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-08 17:20:06.027 [INFO] [main] [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2024-03-08 17:20:07.291 [INFO] [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08 17:20:07.309 [INFO] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 17:20:08.788 [WARN] [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08 17:20:09.484 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9001"]
+2024-03-08 17:20:09.508 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 9001 (http) with context path ''
+2024-03-08 17:20:09.521 [INFO] [main] [com.genesis.UniversitiesApplication:61] Started UniversitiesApplication in 7.382 seconds (JVM running for 9.067)
+2024-03-08 17:20:13.230 [INFO] [http-nio-9001-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08 17:20:13.231 [INFO] [http-nio-9001-exec-2] [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2024-03-08 17:20:13.235 [INFO] [http-nio-9001-exec-2] [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 3 ms
+2024-03-08 17:20:14.801 [ERROR] [http-nio-9001-exec-2] [com.genesis.service.serviceImpl.UniversityDataServiceImpl:78] No EntityManager with actual transaction available for current thread - cannot reliably process 'persist' call
+2024-03-08 17:20:38.086 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 17:20:38.221 [INFO] [RMI TCP Connection(3)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 17:20:38.562 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 17:20:38.567 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+2024-03-08 17:20:38.582 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+2024-03-08 17:20:55.031 [INFO] [main] [com.genesis.UniversitiesApplication:55] Starting UniversitiesApplication using Java 1.8.0_311 on MNA with PID 16260 (E:\eclipse-workspace\genesis\UniversitiesProject\target\classes started by 92306 in E:\eclipse-workspace\genesis\UniversitiesProject)
+2024-03-08 17:20:55.035 [INFO] [main] [com.genesis.UniversitiesApplication:663] The following profiles are active: dev
+2024-03-08 17:20:56.291 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08 17:20:56.394 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 86 ms. Found 4 JPA repository interfaces.
+2024-03-08 17:20:57.233 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 9001 (http)
+2024-03-08 17:20:57.253 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9001"]
+2024-03-08 17:20:57.255 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2024-03-08 17:20:57.255 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-08 17:20:57.396 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+2024-03-08 17:20:57.397 [INFO] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 2277 ms
+2024-03-08 17:20:57.690 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2024-03-08 17:20:58.061 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2024-03-08 17:20:58.133 [INFO] [main] [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08 17:20:58.237 [INFO] [main] [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-08 17:20:58.438 [INFO] [main] [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-08 17:20:58.638 [INFO] [main] [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2024-03-08 17:20:59.675 [INFO] [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08 17:20:59.693 [INFO] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 17:21:01.157 [WARN] [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08 17:21:01.878 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9001"]
+2024-03-08 17:21:01.902 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 9001 (http) with context path ''
+2024-03-08 17:21:01.917 [INFO] [main] [com.genesis.UniversitiesApplication:61] Started UniversitiesApplication in 7.547 seconds (JVM running for 9.244)
+2024-03-08 17:21:31.574 [INFO] [http-nio-9001-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08 17:21:31.575 [INFO] [http-nio-9001-exec-1] [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2024-03-08 17:21:31.577 [INFO] [http-nio-9001-exec-1] [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 2 ms
+2024-03-08 17:21:32.861 [ERROR] [http-nio-9001-exec-1] [com.genesis.service.serviceImpl.UniversityDataServiceImpl:78] No EntityManager with actual transaction available for current thread - cannot reliably process 'persist' call
+2024-03-08 17:21:52.723 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 17:21:52.843 [INFO] [RMI TCP Connection(3)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 17:21:53.170 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 17:21:53.175 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+2024-03-08 17:21:53.196 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+2024-03-08 18:07:19.699 [INFO] [main] [com.genesis.UniversitiesApplication:55] Starting UniversitiesApplication using Java 1.8.0_311 on MNA with PID 18488 (E:\eclipse-workspace\genesis\UniversitiesProject\target\classes started by 92306 in E:\eclipse-workspace\genesis\UniversitiesProject)
+2024-03-08 18:07:19.704 [INFO] [main] [com.genesis.UniversitiesApplication:663] The following profiles are active: dev
+2024-03-08 18:07:20.693 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08 18:07:20.792 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 84 ms. Found 4 JPA repository interfaces.
+2024-03-08 18:07:21.486 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 9001 (http)
+2024-03-08 18:07:21.502 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9001"]
+2024-03-08 18:07:21.503 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2024-03-08 18:07:21.504 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-08 18:07:21.628 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+2024-03-08 18:07:21.629 [INFO] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 1841 ms
+2024-03-08 18:07:21.852 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2024-03-08 18:07:22.171 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2024-03-08 18:07:22.254 [INFO] [main] [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08 18:07:22.351 [INFO] [main] [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-08 18:07:22.560 [INFO] [main] [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-08 18:07:22.766 [INFO] [main] [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2024-03-08 18:07:23.754 [INFO] [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08 18:07:23.768 [INFO] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 18:07:25.211 [WARN] [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08 18:07:25.945 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9001"]
+2024-03-08 18:07:25.971 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 9001 (http) with context path ''
+2024-03-08 18:07:25.986 [INFO] [main] [com.genesis.UniversitiesApplication:61] Started UniversitiesApplication in 6.92 seconds (JVM running for 8.446)
+2024-03-08 18:07:32.694 [INFO] [http-nio-9001-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08 18:07:32.694 [INFO] [http-nio-9001-exec-1] [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2024-03-08 18:07:32.698 [INFO] [http-nio-9001-exec-1] [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 3 ms
+2024-03-08 18:09:51.314 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 18:09:51.426 [INFO] [RMI TCP Connection(3)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 18:09:51.806 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 18:09:51.810 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+2024-03-08 18:09:51.824 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+2024-03-08 18:10:18.400 [INFO] [main] [com.genesis.UniversitiesApplication:55] Starting UniversitiesApplication using Java 1.8.0_311 on MNA with PID 9832 (E:\eclipse-workspace\genesis\UniversitiesProject\target\classes started by 92306 in E:\eclipse-workspace\genesis\UniversitiesProject)
+2024-03-08 18:10:18.407 [INFO] [main] [com.genesis.UniversitiesApplication:663] The following profiles are active: dev
+2024-03-08 18:10:19.654 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08 18:10:19.797 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 103 ms. Found 4 JPA repository interfaces.
+2024-03-08 18:10:20.642 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 9001 (http)
+2024-03-08 18:10:20.660 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9001"]
+2024-03-08 18:10:20.661 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2024-03-08 18:10:20.663 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-08 18:10:20.830 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+2024-03-08 18:10:20.831 [INFO] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 2264 ms
+2024-03-08 18:10:21.197 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2024-03-08 18:10:21.479 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2024-03-08 18:10:21.567 [INFO] [main] [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08 18:10:21.695 [INFO] [main] [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-08 18:10:21.982 [INFO] [main] [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-08 18:10:22.254 [INFO] [main] [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2024-03-08 18:10:23.757 [INFO] [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08 18:10:23.785 [INFO] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 18:10:25.694 [WARN] [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08 18:10:26.583 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9001"]
+2024-03-08 18:10:26.617 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 9001 (http) with context path ''
+2024-03-08 18:10:26.643 [INFO] [main] [com.genesis.UniversitiesApplication:61] Started UniversitiesApplication in 9.047 seconds (JVM running for 11.388)
+2024-03-08 18:10:53.420 [INFO] [http-nio-9001-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08 18:10:53.421 [INFO] [http-nio-9001-exec-1] [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2024-03-08 18:10:53.436 [INFO] [http-nio-9001-exec-1] [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 13 ms
+2024-03-08 18:13:18.176 [INFO] [main] [com.genesis.UniversitiesApplication:55] Starting UniversitiesApplication using Java 1.8.0_311 on MNA with PID 3028 (E:\eclipse-workspace\genesis\UniversitiesProject\target\classes started by 92306 in E:\eclipse-workspace\genesis\UniversitiesProject)
+2024-03-08 18:13:18.184 [INFO] [main] [com.genesis.UniversitiesApplication:663] The following profiles are active: dev
+2024-03-08 18:13:19.542 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08 18:13:19.679 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 114 ms. Found 4 JPA repository interfaces.
+2024-03-08 18:13:20.551 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 9001 (http)
+2024-03-08 18:13:20.571 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9001"]
+2024-03-08 18:13:20.574 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2024-03-08 18:13:20.575 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-08 18:13:20.759 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+2024-03-08 18:13:20.760 [INFO] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 2424 ms
+2024-03-08 18:13:21.452 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2024-03-08 18:13:21.737 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2024-03-08 18:13:21.956 [INFO] [main] [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08 18:13:22.059 [INFO] [main] [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-08 18:13:22.358 [INFO] [main] [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-08 18:13:22.635 [INFO] [main] [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2024-03-08 18:13:23.964 [INFO] [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08 18:13:23.984 [INFO] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 18:13:25.701 [WARN] [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08 18:13:26.554 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9001"]
+2024-03-08 18:13:26.586 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 9001 (http) with context path ''
+2024-03-08 18:13:26.647 [INFO] [main] [com.genesis.UniversitiesApplication:61] Started UniversitiesApplication in 9.356 seconds (JVM running for 11.825)
+2024-03-08 18:13:46.555 [INFO] [http-nio-9001-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08 18:13:46.556 [INFO] [http-nio-9001-exec-2] [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2024-03-08 18:13:46.559 [INFO] [http-nio-9001-exec-2] [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 3 ms
+2024-03-08 18:18:16.621 [INFO] [background-preinit] [org.hibernate.validator.internal.util.Version:21] HV000001: Hibernate Validator 6.2.0.Final
+2024-03-08 18:18:16.645 [INFO] [main] [com.genesis.UniversitiesApplication:55] Starting UniversitiesApplication using Java 1.8.0_311 on MNA with PID 10440 (E:\eclipse-workspace\genesis\UniversitiesProject\target\classes started by 92306 in E:\eclipse-workspace\genesis\UniversitiesProject)
+2024-03-08 18:18:16.647 [INFO] [main] [com.genesis.UniversitiesApplication:663] The following profiles are active: dev
+2024-03-08 18:18:18.021 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08 18:18:18.147 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 105 ms. Found 4 JPA repository interfaces.
+2024-03-08 18:18:19.201 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 9001 (http)
+2024-03-08 18:18:19.223 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9001"]
+2024-03-08 18:18:19.224 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2024-03-08 18:18:19.225 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-08 18:18:19.364 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+2024-03-08 18:18:19.365 [INFO] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 2618 ms
+2024-03-08 18:18:19.581 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2024-03-08 18:18:19.880 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2024-03-08 18:18:19.974 [INFO] [main] [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08 18:18:20.128 [INFO] [main] [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-08 18:18:20.462 [INFO] [main] [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-08 18:18:20.743 [INFO] [main] [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2024-03-08 18:18:22.139 [INFO] [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08 18:18:22.166 [INFO] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 18:18:24.217 [WARN] [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08 18:18:24.812 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9001"]
+2024-03-08 18:18:24.845 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 9001 (http) with context path ''
+2024-03-08 18:18:24.861 [INFO] [main] [com.genesis.UniversitiesApplication:61] Started UniversitiesApplication in 9.127 seconds (JVM running for 11.533)
+2024-03-08 18:18:29.688 [INFO] [http-nio-9001-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08 18:18:29.689 [INFO] [http-nio-9001-exec-2] [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2024-03-08 18:18:29.692 [INFO] [http-nio-9001-exec-2] [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 2 ms
+2024-03-08 18:18:30.236 [WARN] [http-nio-9001-exec-2] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver:208] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> com.genesis.controller.UniversityController.createUniversities(com.genesis.model.UniversityDataRequest,javax.servlet.http.HttpServletRequest) with 2 errors: [Field error in object 'universityDataRequest' on field 'country': rejected value [null]; codes [NotNull.universityDataRequest.country,NotNull.country,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [universityDataRequest.country,country]; arguments []; default message [country]]; default message [country may not be null]] [Field error in object 'universityDataRequest' on field 'country': rejected value [null]; codes [NotEmpty.universityDataRequest.country,NotEmpty.country,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [universityDataRequest.country,country]; arguments []; default message [country]]; default message [country may not be empty]] ]
+2024-03-08 18:24:25.468 [INFO] [background-preinit] [org.hibernate.validator.internal.util.Version:21] HV000001: Hibernate Validator 6.2.0.Final
+2024-03-08 18:24:25.494 [INFO] [main] [com.genesis.UniversitiesApplication:55] Starting UniversitiesApplication using Java 1.8.0_311 on MNA with PID 2328 (E:\eclipse-workspace\genesis\UniversitiesProject\target\classes started by 92306 in E:\eclipse-workspace\genesis\UniversitiesProject)
+2024-03-08 18:24:25.495 [INFO] [main] [com.genesis.UniversitiesApplication:663] The following profiles are active: dev
+2024-03-08 18:24:26.844 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08 18:24:26.969 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 104 ms. Found 4 JPA repository interfaces.
+2024-03-08 18:24:27.990 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 9001 (http)
+2024-03-08 18:24:28.011 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9001"]
+2024-03-08 18:24:28.013 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2024-03-08 18:24:28.014 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-08 18:24:28.185 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+2024-03-08 18:24:28.186 [INFO] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 2531 ms
+2024-03-08 18:24:28.402 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2024-03-08 18:24:28.710 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2024-03-08 18:24:28.800 [INFO] [main] [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08 18:24:28.946 [INFO] [main] [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-08 18:24:29.305 [INFO] [main] [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-08 18:24:29.924 [INFO] [main] [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2024-03-08 18:24:32.072 [INFO] [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08 18:24:32.115 [INFO] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 18:24:34.483 [WARN] [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08 18:24:35.065 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9001"]
+2024-03-08 18:24:35.095 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 9001 (http) with context path ''
+2024-03-08 18:24:35.110 [INFO] [main] [com.genesis.UniversitiesApplication:61] Started UniversitiesApplication in 10.478 seconds (JVM running for 12.767)
+2024-03-08 18:24:48.050 [INFO] [http-nio-9001-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08 18:24:48.051 [INFO] [http-nio-9001-exec-2] [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2024-03-08 18:24:48.054 [INFO] [http-nio-9001-exec-2] [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 2 ms
+2024-03-08 18:24:48.484 [WARN] [http-nio-9001-exec-2] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver:208] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> com.genesis.controller.UniversityController.createUniversities(com.genesis.model.UniversityDataRequest,javax.servlet.http.HttpServletRequest): [Field error in object 'universityDataRequest' on field 'country': rejected value []; codes [NotEmpty.universityDataRequest.country,NotEmpty.country,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [universityDataRequest.country,country]; arguments []; default message [country]]; default message [country may not be empty]] ]
+2024-03-08 20:38:55.618 [INFO] [background-preinit] [org.hibernate.validator.internal.util.Version:21] HV000001: Hibernate Validator 6.2.0.Final
+2024-03-08 20:38:55.625 [INFO] [main] [com.genesis.UniversitiesApplication:55] Starting UniversitiesApplication using Java 1.8.0_311 on MNA with PID 16504 (E:\eclipse-workspace\genesis\UniversitiesProject\target\classes started by 92306 in E:\eclipse-workspace\genesis\UniversitiesProject)
+2024-03-08 20:38:55.694 [INFO] [main] [com.genesis.UniversitiesApplication:663] The following profiles are active: dev
+2024-03-08 20:38:56.940 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08 20:38:57.107 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 151 ms. Found 3 JPA repository interfaces.
+2024-03-08 20:38:57.980 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 9001 (http)
+2024-03-08 20:38:58.087 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9001"]
+2024-03-08 20:38:58.088 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2024-03-08 20:38:58.089 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-08 20:38:58.222 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+2024-03-08 20:38:58.222 [INFO] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 2432 ms
+2024-03-08 20:38:58.403 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2024-03-08 20:38:58.643 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2024-03-08 20:38:58.719 [INFO] [main] [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08 20:38:58.813 [INFO] [main] [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-08 20:38:59.020 [INFO] [main] [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-08 20:38:59.224 [INFO] [main] [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2024-03-08 20:39:00.279 [INFO] [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08 20:39:00.295 [INFO] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 20:39:02.023 [WARN] [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08 20:39:02.484 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9001"]
+2024-03-08 20:39:02.513 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 9001 (http) with context path ''
+2024-03-08 20:39:02.533 [INFO] [main] [com.genesis.UniversitiesApplication:61] Started UniversitiesApplication in 7.578 seconds (JVM running for 9.407)
+2024-03-08 20:39:18.778 [INFO] [http-nio-9001-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08 20:39:18.779 [INFO] [http-nio-9001-exec-2] [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2024-03-08 20:39:18.784 [INFO] [http-nio-9001-exec-2] [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 2 ms
+2024-03-08 20:40:49.645 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 20:40:49.716 [INFO] [RMI TCP Connection(3)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 20:40:50.206 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 20:40:50.222 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+2024-03-08 20:40:50.258 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+2024-03-08 20:40:55.778 [INFO] [background-preinit] [org.hibernate.validator.internal.util.Version:21] HV000001: Hibernate Validator 6.2.0.Final
+2024-03-08 20:40:55.804 [INFO] [main] [com.genesis.UniversitiesApplication:55] Starting UniversitiesApplication using Java 1.8.0_311 on MNA with PID 5100 (E:\eclipse-workspace\genesis\UniversitiesProject\target\classes started by 92306 in E:\eclipse-workspace\genesis\UniversitiesProject)
+2024-03-08 20:40:55.807 [INFO] [main] [com.genesis.UniversitiesApplication:663] The following profiles are active: dev
+2024-03-08 20:40:57.267 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08 20:40:57.464 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 153 ms. Found 3 JPA repository interfaces.
+2024-03-08 20:40:58.554 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 9001 (http)
+2024-03-08 20:40:58.575 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9001"]
+2024-03-08 20:40:58.576 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2024-03-08 20:40:58.577 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-08 20:40:58.722 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+2024-03-08 20:40:58.723 [INFO] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 2761 ms
+2024-03-08 20:40:58.928 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2024-03-08 20:40:59.216 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2024-03-08 20:40:59.302 [INFO] [main] [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08 20:40:59.443 [INFO] [main] [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-08 20:40:59.821 [INFO] [main] [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-08 20:41:00.141 [INFO] [main] [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2024-03-08 20:41:01.503 [INFO] [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08 20:41:01.527 [INFO] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 20:41:04.068 [WARN] [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08 20:41:04.838 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9001"]
+2024-03-08 20:41:04.889 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 9001 (http) with context path ''
+2024-03-08 20:41:04.916 [INFO] [main] [com.genesis.UniversitiesApplication:61] Started UniversitiesApplication in 9.942 seconds (JVM running for 12.116)
+2024-03-08 20:41:06.564 [INFO] [http-nio-9001-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08 20:41:06.567 [INFO] [http-nio-9001-exec-2] [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2024-03-08 20:41:06.571 [INFO] [http-nio-9001-exec-2] [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 3 ms
+2024-03-08 20:42:34.808 [INFO] [background-preinit] [org.hibernate.validator.internal.util.Version:21] HV000001: Hibernate Validator 6.2.0.Final
+2024-03-08 20:42:34.813 [INFO] [main] [com.genesis.UniversitiesApplication:55] Starting UniversitiesApplication using Java 1.8.0_311 on MNA with PID 12872 (E:\eclipse-workspace\genesis\UniversitiesProject\target\classes started by 92306 in E:\eclipse-workspace\genesis\UniversitiesProject)
+2024-03-08 20:42:34.841 [INFO] [main] [com.genesis.UniversitiesApplication:663] The following profiles are active: dev
+2024-03-08 20:42:35.996 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08 20:42:36.091 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 82 ms. Found 3 JPA repository interfaces.
+2024-03-08 20:42:36.855 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 9001 (http)
+2024-03-08 20:42:36.960 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9001"]
+2024-03-08 20:42:36.962 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2024-03-08 20:42:36.963 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-08 20:42:37.105 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+2024-03-08 20:42:37.107 [INFO] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 2167 ms
+2024-03-08 20:42:37.297 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2024-03-08 20:42:37.554 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2024-03-08 20:42:37.637 [INFO] [main] [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08 20:42:37.745 [INFO] [main] [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-08 20:42:38.018 [INFO] [main] [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-08 20:42:38.302 [INFO] [main] [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2024-03-08 20:42:39.244 [INFO] [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08 20:42:39.262 [INFO] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 20:42:41.019 [WARN] [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08 20:42:41.521 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9001"]
+2024-03-08 20:42:41.546 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 9001 (http) with context path ''
+2024-03-08 20:42:41.561 [INFO] [main] [com.genesis.UniversitiesApplication:61] Started UniversitiesApplication in 7.424 seconds (JVM running for 9.075)
+2024-03-08 20:42:47.819 [INFO] [http-nio-9001-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08 20:42:47.820 [INFO] [http-nio-9001-exec-1] [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2024-03-08 20:42:47.822 [INFO] [http-nio-9001-exec-1] [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 2 ms
+2024-03-08 20:42:48.330 [WARN] [http-nio-9001-exec-1] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver:208] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> com.genesis.controller.UniversityController.createUniversities(com.genesis.model.UniversityDataRequest,javax.servlet.http.HttpServletRequest) with 2 errors: [Field error in object 'universityDataRequest' on field 'country': rejected value [null]; codes [NotEmpty.universityDataRequest.country,NotEmpty.country,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [universityDataRequest.country,country]; arguments []; default message [country]]; default message [country may not be empty]] [Field error in object 'universityDataRequest' on field 'country': rejected value [null]; codes [NotNull.universityDataRequest.country,NotNull.country,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [universityDataRequest.country,country]; arguments []; default message [country]]; default message [country may not be null]] ]
+2024-03-08 20:42:54.677 [WARN] [http-nio-9001-exec-4] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver:208] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<?> com.genesis.controller.UniversityController.createUniversities(com.genesis.model.UniversityDataRequest,javax.servlet.http.HttpServletRequest): [Field error in object 'universityDataRequest' on field 'country': rejected value []; codes [NotEmpty.universityDataRequest.country,NotEmpty.country,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [universityDataRequest.country,country]; arguments []; default message [country]]; default message [country may not be empty]] ]
+2024-03-08 20:44:24.706 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 20:44:24.812 [INFO] [RMI TCP Connection(3)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 20:44:25.004 [INFO] [RMI TCP Connection(4)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 20:44:25.348 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 20:44:25.354 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+2024-03-08 20:44:25.382 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+2024-03-08 20:45:34.893 [INFO] [background-preinit] [org.hibernate.validator.internal.util.Version:21] HV000001: Hibernate Validator 6.2.0.Final
+2024-03-08 20:45:34.919 [INFO] [main] [com.genesis.UniversitiesApplication:55] Starting UniversitiesApplication using Java 1.8.0_311 on MNA with PID 18148 (E:\eclipse-workspace\genesis\UniversitiesProject\target\classes started by 92306 in E:\eclipse-workspace\genesis\UniversitiesProject)
+2024-03-08 20:45:34.920 [INFO] [main] [com.genesis.UniversitiesApplication:663] The following profiles are active: dev
+2024-03-08 20:45:36.295 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08 20:45:36.421 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 107 ms. Found 3 JPA repository interfaces.
+2024-03-08 20:45:37.601 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 9001 (http)
+2024-03-08 20:45:37.622 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9001"]
+2024-03-08 20:45:37.623 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2024-03-08 20:45:37.624 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-08 20:45:37.780 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+2024-03-08 20:45:37.781 [INFO] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 2756 ms
+2024-03-08 20:45:37.979 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2024-03-08 20:45:38.284 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2024-03-08 20:45:38.386 [INFO] [main] [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08 20:45:38.526 [INFO] [main] [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-08 20:45:38.836 [INFO] [main] [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-08 20:45:39.121 [INFO] [main] [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2024-03-08 20:45:40.388 [INFO] [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08 20:45:40.410 [INFO] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 20:45:42.543 [WARN] [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08 20:45:43.094 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9001"]
+2024-03-08 20:45:43.126 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 9001 (http) with context path ''
+2024-03-08 20:45:43.147 [INFO] [main] [com.genesis.UniversitiesApplication:61] Started UniversitiesApplication in 9.112 seconds (JVM running for 11.409)
+2024-03-08 20:45:45.600 [INFO] [http-nio-9001-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08 20:45:45.602 [INFO] [http-nio-9001-exec-1] [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2024-03-08 20:45:45.605 [INFO] [http-nio-9001-exec-1] [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 2 ms
+2024-03-08 20:52:13.325 [INFO] [background-preinit] [org.hibernate.validator.internal.util.Version:21] HV000001: Hibernate Validator 6.2.0.Final
+2024-03-08 20:52:13.351 [INFO] [main] [com.genesis.UniversitiesApplication:55] Starting UniversitiesApplication using Java 1.8.0_311 on MNA with PID 8912 (E:\eclipse-workspace\genesis\UniversitiesProject\target\classes started by 92306 in E:\eclipse-workspace\genesis\UniversitiesProject)
+2024-03-08 20:52:13.354 [INFO] [main] [com.genesis.UniversitiesApplication:663] The following profiles are active: dev
+2024-03-08 20:52:14.812 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08 20:52:15.086 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 219 ms. Found 3 JPA repository interfaces.
+2024-03-08 20:52:16.299 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 9001 (http)
+2024-03-08 20:52:16.429 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9001"]
+2024-03-08 20:52:16.431 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2024-03-08 20:52:16.432 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-08 20:52:16.755 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+2024-03-08 20:52:16.756 [INFO] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 3295 ms
+2024-03-08 20:52:16.955 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2024-03-08 20:52:17.206 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2024-03-08 20:52:17.283 [INFO] [main] [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08 20:52:17.412 [INFO] [main] [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-08 20:52:17.761 [INFO] [main] [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-08 20:52:18.116 [INFO] [main] [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2024-03-08 20:52:20.060 [INFO] [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08 20:52:20.120 [INFO] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 20:52:22.662 [WARN] [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08 20:52:23.505 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9001"]
+2024-03-08 20:52:23.541 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 9001 (http) with context path ''
+2024-03-08 20:52:23.567 [INFO] [main] [com.genesis.UniversitiesApplication:61] Started UniversitiesApplication in 11.04 seconds (JVM running for 13.203)
+2024-03-08 20:52:52.549 [INFO] [http-nio-9001-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08 20:52:52.549 [INFO] [http-nio-9001-exec-2] [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2024-03-08 20:52:52.555 [INFO] [http-nio-9001-exec-2] [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 5 ms
+2024-03-08 20:54:02.684 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 20:54:02.826 [INFO] [RMI TCP Connection(3)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 20:54:03.160 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 20:54:03.164 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+2024-03-08 20:54:03.187 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+2024-03-08 20:54:08.019 [INFO] [background-preinit] [org.hibernate.validator.internal.util.Version:21] HV000001: Hibernate Validator 6.2.0.Final
+2024-03-08 20:54:08.022 [INFO] [main] [com.genesis.UniversitiesApplication:55] Starting UniversitiesApplication using Java 1.8.0_311 on MNA with PID 1412 (E:\eclipse-workspace\genesis\UniversitiesProject\target\classes started by 92306 in E:\eclipse-workspace\genesis\UniversitiesProject)
+2024-03-08 20:54:08.046 [INFO] [main] [com.genesis.UniversitiesApplication:663] The following profiles are active: dev
+2024-03-08 20:54:09.178 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08 20:54:09.282 [INFO] [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 88 ms. Found 3 JPA repository interfaces.
+2024-03-08 20:54:10.017 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 9001 (http)
+2024-03-08 20:54:10.106 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-9001"]
+2024-03-08 20:54:10.108 [INFO] [main] [org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+2024-03-08 20:54:10.110 [INFO] [main] [org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2024-03-08 20:54:10.242 [INFO] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+2024-03-08 20:54:10.243 [INFO] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 2109 ms
+2024-03-08 20:54:10.442 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+2024-03-08 20:54:10.672 [INFO] [main] [com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+2024-03-08 20:54:10.748 [INFO] [main] [org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08 20:54:10.865 [INFO] [main] [org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-08 20:54:11.096 [INFO] [main] [org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-08 20:54:11.302 [INFO] [main] [org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2024-03-08 20:54:12.243 [INFO] [main] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08 20:54:12.260 [INFO] [main] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 20:54:14.023 [WARN] [main] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08 20:54:14.555 [INFO] [main] [org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-9001"]
+2024-03-08 20:54:14.583 [INFO] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 9001 (http) with context path ''
+2024-03-08 20:54:14.600 [INFO] [main] [com.genesis.UniversitiesApplication:61] Started UniversitiesApplication in 7.264 seconds (JVM running for 9.143)
+2024-03-08 20:54:18.220 [INFO] [http-nio-9001-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08 20:54:18.221 [INFO] [http-nio-9001-exec-2] [org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2024-03-08 20:54:18.228 [INFO] [http-nio-9001-exec-2] [org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 7 ms
+2024-03-08 20:59:03.380 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 20:59:03.524 [INFO] [RMI TCP Connection(3)-127.0.0.1] [org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159] Application shutdown requested.
+2024-03-08 20:59:03.864 [INFO] [RMI TCP Connection(2)-127.0.0.1] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08 20:59:03.868 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+2024-03-08 20:59:03.880 [INFO] [RMI TCP Connection(2)-127.0.0.1] [com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.

@@ -1,0 +1,50 @@
+package com.genesis.model;
+
+public enum ResponseCode {
+
+	SUCCESS("00"), 
+	INVALID_TOKEN("01"), 			  // INVALID_ERROR
+	TOKEN_EXPIRED("02"),			  // SYSTEM_ERROR
+	REQUIRED_FIELD_MISSING("03"), 
+	ALFA_BANK_ACCT_NOT_FOUND("04"),   // INVALID_DATA_FORMAT
+	TRADING_ACCOUNT_NOT_ACTIVE("05"), // MERCHANT_ACCOUNT_NOT_ACTIVE
+	INVALID_CNIC("06"),               // INVALID_STORE_ID
+	USER_EXPIRED("07"),               // STORE_NOT_ACTIVE
+	INVALID_PASSWORD("08"),           // PAYMENT_METHOD_NOT_ENABLED
+	PAYMENT_REJECTED("09"),
+	INVALID_USER("10"),
+	CLIENT_CODE_NOT_FOUND("11"),
+	SYSTEM_CONFIGURATION_ERROR("12"),
+	GUEST_USER_CREATED("13"),
+	ERROR_DURING_GUEST_CREATION("14"),
+	USER_ALREADY_EXISTED("15"),
+	INVALID_CLIENT_DATA("16"),
+	INVALID_FILE("17"),
+	MISSING_FIELD("18"),
+	VALID_CLIENT_DATA("19"),
+	VALID_FILE("20"),
+	ERROR_SENDING_REQ_NCCPL("21"),
+	TRANSACTION_ID_ALREADY_EXIST("059"),
+	GL_VOUCHER_ERR("060"),
+	SERVER_ERROR("058");
+	
+	private String code;
+
+	ResponseCode(String code) {
+		this.code = code;
+	}
+
+	public String getCode() {
+		return code;
+	}
+	
+	public static ResponseCode findByName(String name){
+	    for(ResponseCode v : values()){
+	        if( v.getCode().equals(name)){
+	            return v;
+	        }
+	    }
+	    return null;
+	}
+
+}

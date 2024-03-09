@@ -1,0 +1,17 @@
+package com.genesis;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
+
+@EnableScheduling
+@SpringBootApplication
+public class UniversitiesApplication {
+	
+	public static void main(String[] args) {
+//		System.setProperty("javax.net.ssl.trustStore", "E:\\TestFiles\\NCCPL_SOFTECH.jks");
+//		System.setProperty("javax.net.ssl.trustStorePassword" , "11aa2b");
+		SpringApplication.run(UniversitiesApplication.class, args);
+	}
+}

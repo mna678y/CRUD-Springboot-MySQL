@@ -1,0 +1,26 @@
+package com.genesis.model;
+
+import java.io.Serializable;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+
+import org.springframework.stereotype.Component;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Component
+@Getter @Setter
+public class updateUniRequest extends UniversityDataRequest implements Serializable  {
+	
+	@NotBlank(message = "Domain name must not be blank")
+    @Pattern(regexp = "[a-zA-Z0-9]+(\\.[a-zA-Z]+)+", message = "Invalid domain name format")
+	private String domainName;
+	
+	@NotBlank(message = "Website must not be blank")
+    @Pattern(regexp = "^https?://(?:www\\.)?[a-zA-Z0-9-]+(\\.[a-zA-Z]+)+$", message = "Invalid website format")
+	private String website;
+	
+	
+}

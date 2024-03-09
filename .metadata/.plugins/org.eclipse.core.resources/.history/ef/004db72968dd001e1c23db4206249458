@@ -1,0 +1,18 @@
+package com.genesis.model;
+
+import java.io.Serializable;
+
+import org.springframework.stereotype.Component;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Component
+@Getter @Setter
+public class updateUniRequest extends UniversityDataRequest implements Serializable  {
+	
+	private string domainName;
+	private string website;
+	
+	
+}

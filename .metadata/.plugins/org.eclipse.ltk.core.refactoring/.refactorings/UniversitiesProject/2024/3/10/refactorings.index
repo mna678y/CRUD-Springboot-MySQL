@@ -1,0 +1,52 @@
+1709800355984	Delete element
+1709800358931	Delete element
+1709800361591	Delete element
+1709800363957	Delete element
+1709800366731	Delete element
+1709800369246	Delete element
+1709800394238	Delete element
+1709800439848	Rename package 'com.softech'
+1709800603070	Rename type 'BankApplication'
+1709800662714	Rename package 'com.softech.config'
+1709800684203	Rename package 'com.softech.context'
+1709800712245	Rename package 'com.softech.controller'
+1709800729214	Rename package 'com.softech.dao'
+1709800748564	Rename package 'com.softech.exception'
+1709800762389	Rename package 'com.softech.model'
+1709800779615	Rename package 'com.softech.service'
+1709800834870	Rename package 'com.softech.util'
+1709803484298	Rename type 'CashController'
+1709806322809	Rename type 'ClaBankService'
+1709806487208	Delete element
+1709806529429	Rename type 'ClaBankServiceImpl'
+1709806651539	Delete element
+1709806681403	Delete element
+1709806717298	Move compilation unit
+1709807432967	Delete element
+1709814133490	Delete element
+1709814182946	Rename package 'com.genesis.dao'
+1709814299097	Delete element
+1709814318606	Delete element
+1709815831435	Delete element
+1709815834248	Delete element
+1709822864607	Delete element
+1709823264263	Delete element
+1709823320888	Delete element
+1709823350644	Delete element
+1709823359161	Delete element
+1709823362347	Delete element
+1709823374373	Delete element
+1709823428837	Rename type 'BankAccountRequest'
+1709823893556	Delete element
+1709884007119	Delete element
+1709896369732	Delete element
+1709904053888	Copy compilation unit
+1709904152572	Delete element
+1709906398699	Delete element
+1709906483467	Delete element
+1709912319125	Delete element
+1709914061727	Delete element
+1709915270285	Rename type 'updateUniRequest'
+1709916584437	Delete element
+1709919050396	Delete element
+1709922949186	Delete element

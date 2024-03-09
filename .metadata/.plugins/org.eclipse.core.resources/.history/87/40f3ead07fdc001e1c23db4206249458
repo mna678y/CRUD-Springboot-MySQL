@@ -1,0 +1,14 @@
+package com.genesis.entities;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "DOCTORS")
+public class Country implements Serializable {
+	
+	
+
+}

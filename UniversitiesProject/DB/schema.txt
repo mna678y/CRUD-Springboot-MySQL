@@ -1,0 +1,34 @@
+CREATE TABLE Domain (
+    domain_id INT AUTO_INCREMENT PRIMARY KEY,
+    domain_name VARCHAR(255) NOT NULL,
+    university_id INT,
+    country_code CHAR(2),
+    FOREIGN KEY (university_id) REFERENCES University(university_id),
+    FOREIGN KEY (country_code) REFERENCES Country(country_code)
+);
+------------------------------------------------------------------------
+CREATE TABLE University (
+    university_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    state VARCHAR(255),
+    website VARCHAR(255),
+    country_code CHAR(2),
+    FOREIGN KEY (country_code) REFERENCES Country(country_code)
+);
+
+-------------------------------------------------------------------------
+CREATE TABLE Country (
+    country_code CHAR(2) PRIMARY KEY,
+    country_name VARCHAR(100) NOT NULL
+);
+-----------------------------------------------------------------------
+-- Insert data into Country table
+INSERT INTO Country (country_code, country_name) VALUES ('PK', 'Pakistan');
+
+-- Insert data into University table
+INSERT INTO University (name, alpha_two_code, website, country_code) 
+VALUES ('Iqra University', 'PK', 'http://www.iqra.edu.pk/', 'PK');
+
+-- Insert data into Domain table
+INSERT INTO Domain (domain_name, university_id) 
+VALUES ('iqra.edu.pk', 1);
