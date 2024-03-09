@@ -1,5 +1,0 @@
-package com.genesis.repositories;
-
-public interface DomainRepository {
-
-}

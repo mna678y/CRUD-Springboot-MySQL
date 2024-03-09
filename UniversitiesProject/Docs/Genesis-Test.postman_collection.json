@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "5c978240-a18e-4761-a2c5-09a0f00fdd06",
+		"name": "Genesis-Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13311568",
+		"_collection_link": "https://universal-crescent-182878.postman.co/workspace/genesis~89fee8ea-ab8f-4ada-b58a-7c0132e5f182/collection/13311568-5c978240-a18e-4761-a2c5-09a0f00fdd06?action=share&source=collection_link&creator=13311568"
+	},
+	"item": [
+		{
+			"name": "createUniversityData",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"country\":\"pakistan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/universities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"universities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modifyUniversityData",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"country\":\"pakistan\",\r\n    \"website\":\"https://mna.edu.pk\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/universities/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"universities",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchUniversitiesByCountry",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9001/universities?country=pakistan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"universities"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "pakistan"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
